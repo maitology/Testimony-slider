@@ -1,0 +1,75 @@
+INPUT IN CSS:
+
+/* Main container for testimonials */
+.testimonial-slider {
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px;
+    background-color: #FD7E14;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+/* Slide container */
+.testimonial-slide {
+    display: flex;
+    transition: transform 0.50s ease-in-out;
+}
+
+/* Individual testimonials */
+.testimonial-item {
+    min-width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #FD7E14;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.00);
+    margin: 10px;
+}
+
+/* Testimonial text */
+.testimonial-text {
+    font-family: 'Arial', sans-serif;
+ /* Different font for testimonial */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Author's name */
+.testimonial-author {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Rating stars */
+.testimonial-rating {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 3px; /* Space between stars */
+  margin-top: 20px; /* Space between author and rating */
+}
+
+/* Animation for sliding effect */
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply the animation */
+.testimonial-slide {
+  animation: slideAnimation 20s infinite;
+}
+
+/* Optional hover effect to pause the slider */
+.testimonial-slider:hover .testimonial-slide {
+  animation-play-state: paused;
+}
